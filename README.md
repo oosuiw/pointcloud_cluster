@@ -117,9 +117,6 @@ This tool is ideal for applications requiring precise object localization, such 
 * **Voxel Leaf Size**: Adjust `*_voxel_leaf_size` to control the downsampling level of the input scan. Smaller values retain more detail but increase computation.
 * **`detection_score_threshold`**: This is crucial for determining what constitutes a "detection." A lower score indicates a better match. You'll need to tune this based on your application's requirements.
 
-### License
-
-TODO: Add your license information here (e.g., MIT, Apache 2.0, etc.).
 
 ### Contributing
 
