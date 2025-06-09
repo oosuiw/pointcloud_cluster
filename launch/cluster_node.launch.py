@@ -6,7 +6,7 @@ from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
-    package_dir = get_package_share_directory('cluster_package')
+    package_dir = get_package_share_directory('pointcloud_cluster')
     
     # 모델 파일 경로 설정 (절대 경로)
     # config/params.yaml 에서는 "models/my_model.ply"와 같이 상대 경로로 설정하고,
@@ -40,7 +40,7 @@ def generate_launch_description():
         output_topic_arg,
         scan_topic_arg, # 새 아규먼트 추가
         Node(
-            package='cluster_package',
+            package='pointcloud_cluster',
             executable='pointcloud_clusterer',
             name='pointcloud_clusterer_node',
             output='screen',
