@@ -1,6 +1,5 @@
 ---
 ## LiDAR-based Object Detection with NDT/ICP in ROS2 Humble
-
 ---
 
 ### Introduction
