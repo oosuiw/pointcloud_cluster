@@ -1,0 +1,25 @@
+# config/params.yaml
+pointcloud_clusterer:
+  ros__parameters:
+    model_path: "models/my_model.ply" # package_share_directory/models/my_model.ply 경로를 나타냄
+    registration_method: "ICP" # 또는 "NDT"
+    output_topic: "processed_pointcloud" # 처리된 포인트 클라우드 발행 토픽
+    scan_topic: "/livox/lidar" # 실제 라이다 스캔 데이터 토픽 이름으로 변경해야 합니다. (예: /velodyne_points, /scan_points, /camera/depth/color/points 등)
+    
+    # ICP 파라미터
+    icp_max_iterations: 100
+    icp_transformation_epsilon: 1e-8
+    icp_euclidean_fitness_epsilon: 1e-4
+    icp_max_correspondence_distance: 0.1
+    icp_voxel_leaf_size: 0.02 # ICP 전처리용 다운샘플링 리프 크기 (미터 단위)
+
+    # NDT 파라미터
+    ndt_resolution: 1.0
+    ndt_step_size: 0.1
+    ndt_transformation_epsilon: 0.01
+    ndt_max_iterations: 30
+    ndt_voxel_leaf_size: 0.05 # NDT 전처리용 다운샘플링 리프 크기 (미터 단위)
+
+    # 객체 검출 스코어 임계값
+    # 정합 스코어가 이 값보다 낮으면 객체가 검출된 것으로 간주 (정합이 잘 되었을수록 스코어는 0에 가까워짐)
+    detection_score_threshold: 0.05
