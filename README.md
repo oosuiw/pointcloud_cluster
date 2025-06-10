@@ -41,7 +41,7 @@ This tool is ideal for applications requiring precise object localization, such 
 
 2.  **Clone the Repository:**
     ```bash
-    git clone https://github.com/your_username/pointcloud_cluster.git # Replace with your repository URL
+    git clone https://github.com/oosuiw/pointcloud_cluster.git
     ```
 
 3.  **Place your 3D Model:**
